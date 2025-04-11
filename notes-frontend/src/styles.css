@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #eee;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+  
+  /* Toggle button */
+  .toggle-btn {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  body.dark .toggle-btn {
+    background: #ddd;
+    color: #000;
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem 2rem;
+    max-width: 500px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark .form {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  }
+  
+  .form input,
+  .form textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+  
+  body.dark .form input,
+  body.dark .form textarea {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  
+  .form button {
+    padding: 0.8rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Notes Grid */
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* Note Card */
+  .note-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .note-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  body.dark .note-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+  
+  .note-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .note-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  
+  .note-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .note-actions button {
+    background: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  
+  .note-actions button:hover {
+    color: #0056b3;
+  }
+  
+  body.dark .note-actions button {
+    color: #66b2ff;
+  }
+  
+  body.dark .note-actions button:hover {
+    color: #3399ff;
+  }
+  
